@@ -16,7 +16,7 @@ sudo apt install -y mysql-server
 echo "✅ MySQL installed."
 
 echo "🔐 Securing MySQL root account..."
-sudo mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '${MYSQL_ROOT_PASSWORD}'; FLUSH PRIVILEGES;"
+sudo mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED BY '${MYSQL_ROOT_PASSWORD}'; FLUSH PRIVILEGES;"
 
 echo "🌍 Enabling root login from any host..."
 sudo mysql -e "CREATE USER IF NOT EXISTS 'root'@'%' IDENTIFIED BY '${MYSQL_ROOT_PASSWORD}';"
@@ -39,4 +39,3 @@ fi
 
 echo "✅ MySQL installation complete with remote root access."
 echo "📌 REMEMBER: Ensure port 3306 is open in your cloud provider (e.g., AWS Security Group)."
-echo "📌 You can check MySQL status using: sudo systemctl status mysql"
