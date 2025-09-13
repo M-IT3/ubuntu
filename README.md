@@ -1,5 +1,15 @@
-# ubuntu
-Ubuntu-setup
+# Ubuntu Setup Scripts
+
+This README provides quick commands to install VSCode, install MySQL Server, and fully uninstall MySQL on your Ubuntu system using curated scripts.
+
+---
+
+## ⬇️ Installing VSCode
+
+Download and run the VSCode install script:
+
+```bash
+curl -o install-vscode.sh https://raw.githubusercontent.com/M-IT3/ubuntu/refs/heads/main/install-vscode.sh && chmod +x install-vscode.sh && ./install-vscode.sh
 
 
 
